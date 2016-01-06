@@ -94,17 +94,13 @@ var test = async function() {
     username: "mary",
     age: 12
   },{
-    where: {
-      username: "tom"    
-    }
+      username: "tom"
   });
   console.log(update_data);
 
   //Remove data with a filter
   var remove_data = await userModel.remove({
-    where: {
       age: { lt: 15 }
-    }
   });
   console.log(remove_data);
   //Remove all data (pass no where filter)
